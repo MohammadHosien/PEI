@@ -1,0 +1,23 @@
+.custom-pre {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    /* color:#7F7F7F; */
+    padding: 10px;
+    z-index: 5;
+  }
+
+.custom-next {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color:#ffffff;
+    z-index: 5;
+  }
+  :root {
+    --swiper-pagination-color: #1A56CE;
+    --swiper-pagination-bullet-size: 10px;
+    --swiper-pagination-bullet-inactive-color: rgb(0, 0, 0);
+  }
