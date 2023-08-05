@@ -1,4 +1,4 @@
-import Info from "@/components/institueInfo/InfoIns"
+import Info from "@/components/institueInfo/summaryInfo"
 
 const InfoLayout=({children}:{children:React.ReactNode})=>{
     return(

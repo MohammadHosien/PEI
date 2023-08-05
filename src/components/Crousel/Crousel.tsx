@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
@@ -11,9 +11,16 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { Typography, Button } from "@mui/material";
+import axios from "axios";
 
 const Crousel = () => {
-  const [indexSwiper, setIndexSwiper] = useState<number>(0);
+  const [indexSwiper, setIndexSwiper] = useState<number | string>(0);
+  // useEffect(() => {
+  //   axios.get("http://localhost:3000/api/hello").then((res) => {
+  //     console.log(res.data);
+  //   });
+  // }, []);
+
   return (
     <div
       style={{
@@ -43,7 +50,7 @@ const Crousel = () => {
         }}
         className="w-[75%] h-[200px] sm:h-[500px] mt-20 text-center rounded-[25px] border-solid border-2 border-black"
         onSwiper={(swiper) => {}}
-        onSlideChange={(e) => setIndexSwiper(e.activeIndex)}
+      
       >
         <div className="custom-pre" style={{ color: "#7f7f7f" }}>
           <ArrowRightIcon sx={{ fontSize: "50px" }} />
@@ -99,7 +106,7 @@ const Crousel = () => {
           borderRadius: "20px",
         }}
       >
-        <div style={{ marginTop: "20px" }}>
+        <div style={{ marginTop: "20px"}} className='text-sm sm:text-lg'>
           حتما نسخه آپلیکیشن راهم نصب کنید
         </div>
       </Typography>
@@ -113,7 +120,7 @@ const Crousel = () => {
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1200 120"
         preserveAspectRatio="none"
-        className='mt-9'
+        className="mt-9"
       >
         <path
           d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
@@ -122,6 +129,35 @@ const Crousel = () => {
           fill-opacity="1"
         ></path>
       </svg>
+      {/* <input
+        onChange={(e) => {
+          const file = e.target.files[0];
+          const reader = new FileReader();
+          reader.readAsBinaryString(file);
+          reader.onload = function () {
+            const data = reader.result;
+            console.log(data)
+            // Send data to server
+          };
+        }}
+        type="file"
+      />
+      <button
+        onClick={() => {
+          axios
+            .post("http://localhost:3000/api/hello", {
+              hello: "mohammad hosein",
+            })
+            .then((res) => {
+              console.log(res.data);
+            })
+            .catch((err) => {
+              console.log(err);
+            });
+        }}
+      >
+        hello
+      </button> */}
     </div>
   );
 };

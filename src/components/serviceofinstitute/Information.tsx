@@ -6,7 +6,7 @@ const Information = () => {
   return (
     <>
       <Grid container rowSpacing={10} className="mt-20">
-        <Grid xs={6}>
+        <Grid item xs={6}>
           <div className="bordrt-2  border-solid border-red">
             <Typography variant="h4">آموزشگاه زبان پل</Typography>
             <p className="mt-10">
@@ -21,8 +21,8 @@ const Information = () => {
             </p>
           </div>
         </Grid>
-        <Grid xs={6} className="text-center mt-0">
-          <img src="/img/english3.jpg" alt="pol" className="rounded-lg" />
+        <Grid xs={6} item className="text-center mt-0">
+          <Image src="/img/english3.jpg" priority={true} width={1000} height={1000} alt="pol"/>
         </Grid>
       </Grid>{" "}
     </>
