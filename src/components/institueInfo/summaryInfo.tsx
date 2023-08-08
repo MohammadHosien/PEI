@@ -1,19 +1,19 @@
 "use client";
 
-import { Typography, Divider, Grid } from "@mui/material";
+import { Typography, Divider, Grid, Container } from "@mui/material";
 import Image from "next/image";
 import InfoBtns from "./infBtn";
 
-const Info = () => {
+const SumInfo = () => {
   return (
-    <>
+    <Container maxWidth='xl'>
       <Divider
         sx={{
           "&::before, &::after": {
             border: "3px #D91C54 solid",
             borderRadius: "30px",
           },
-          mt: "50px",
+          mt: "90px",
         }}
       >
         <Typography variant="h4">اطلاعات آموزشگاه</Typography>
@@ -35,8 +35,8 @@ const Info = () => {
         </Grid>
       </Grid>
       <InfoBtns />
-    </>
+    </Container>
   );
 };
 
-export default Info;
+export default SumInfo;

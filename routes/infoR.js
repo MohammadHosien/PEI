@@ -1,9 +1,11 @@
 const { Router } = require("express");
 
-const { getInfoCont } = require("../controller/infoCont");
+const { getInfoCont,getPartOfInfoCont } = require("../controller/infoCont");
 
 const router = new Router();
 
 router.get("/info", getInfoCont);
+
+router.get("/info/:id",getPartOfInfoCont)
 
 module.exports = router;

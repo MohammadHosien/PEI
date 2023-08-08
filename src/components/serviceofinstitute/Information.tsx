@@ -5,7 +5,7 @@ import Link from "next/link";
 const Information = () => {
   return (
     <>
-      <Grid container rowSpacing={10} className="mt-20">
+      <Grid container rowSpacing={10} className='mt-2'>
         <Grid item xs={6}>
           <div className="bordrt-2  border-solid border-red">
             <Typography variant="h4">آموزشگاه زبان پل</Typography>
