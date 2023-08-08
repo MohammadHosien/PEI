@@ -28,7 +28,7 @@ const InfoBtns = () => {
         </Grid>
         <Grid item xs={2}>
           <button onClick={()=>{router.push('/info/expense')}} className="bg-[#60D2AE] w-[80%] rounded-3xl h-10 text-[#fff] hover:bg-blue transition-all">
-            هزینه ی دوره ها
+           k هزینه ی دوره ها
           </button>
         </Grid>
         <Grid item xs={2}>
