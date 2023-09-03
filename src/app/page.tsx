@@ -1,3 +1,4 @@
+"use client";
 import Crousel from "@/components/Crousel/Crousel";
 import ServicesOfSites from "@/components/servicesofsite/Servicesofsites";
 import ServicesOfinstitue from "@/components/serviceofinstitute/Servicesofinstitute";

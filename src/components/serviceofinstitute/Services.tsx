@@ -1,16 +1,15 @@
 import { Grid, IconButton, Typography } from "@mui/material";
 import SchoolIcon from "@mui/icons-material/School";
-import LocalLibraryIcon from "@mui/icons-material/LocalLibrary";
 import FactCheckIcon from "@mui/icons-material/FactCheck";
 import ClassIcon from "@mui/icons-material/Class";
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { useRouter } from "next/navigation";
 
 const Services = () => {
-  const router=useRouter()
+  const router = useRouter();
   return (
     <>
-      <Grid container sx={{ mt: "80px" }}>
+      <Grid container sx={{ mt: "80px",mb:"50px" }}>
         <Grid
           xs={12}
           md={6}
@@ -24,6 +23,9 @@ const Services = () => {
           item
         >
           <IconButton
+            onClick={() => {
+              router.push("/info/educationalLevels");
+            }}
             style={{
               position: "relative",
               backgroundColor: "#D91C54",
@@ -45,7 +47,47 @@ const Services = () => {
               }}
             />
           </IconButton>
-          <Typography variant="body1">معرفی اساتید</Typography>
+          <Typography variant="body1">دوره های مکالمه</Typography>
+        </Grid>
+
+        <Grid
+          xs={12}
+          md={6}
+          lg={3}
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            flexDirection: "column",
+            gap: "10px",
+          }}
+          item
+        >
+          <IconButton
+            onClick={() => {
+              router.push("/info");
+            }}
+            style={{
+              position: "relative",
+              backgroundColor: "#60D2AE",
+              borderRadius: "50%",
+              overflow: "hidden",
+              height: "150px",
+              textAlign: "center",
+              width: "150px",
+            }}
+          >
+            <FactCheckIcon
+              sx={{
+                position: "absolute",
+                color: "white",
+                fontSize: "50px",
+                top: "50%",
+                left: "50%",
+                transform: "translate(-50%, -50%)",
+              }}
+            />
+          </IconButton>
+          <Typography variant="body1">آمادگی آزمون های بین المللی</Typography>
         </Grid>
         <Grid
           xs={12}
@@ -82,43 +124,6 @@ const Services = () => {
             />
           </IconButton>
           <Typography variant="body1">پروفایل زبان آموزان</Typography>
-        </Grid>
-        <Grid
-          xs={12}
-          md={6}
-          lg={3}
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            flexDirection: "column",
-            gap: "10px",
-          }}
-          item
-        >
-          <IconButton
-            onClick={()=>{router.push('/info')}}
-            style={{
-              position: "relative",
-              backgroundColor: "#60D2AE",
-              borderRadius: "50%",
-              overflow: "hidden",
-              height: "150px",
-              textAlign: "center",
-              width: "150px",
-            }}
-          >
-            <FactCheckIcon
-              sx={{
-                position: "absolute",
-                color: "white",
-                fontSize: "50px",
-                top: "50%",
-                left: "50%",
-                transform: "translate(-50%, -50%)",
-              }}
-            />
-          </IconButton>
-          <Typography variant="body1">اطلاعات آموزشگاه</Typography>
         </Grid>
         <Grid
           xs={12}

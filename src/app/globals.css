@@ -7,6 +7,14 @@
     src: url('/fonts/Vazirmatn-Medium.ttf');
 }
 
+.infoImage{
+    background-image: url('/img/eng1.jpg');
+    background-attachment: fixed;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-color: #D4E2FF;
+}
+
 body{
     font-family:vazir;
 }

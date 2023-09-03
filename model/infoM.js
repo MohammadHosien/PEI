@@ -35,4 +35,4 @@ const infoSchema = new mongoos.Schema({
   },
 });
 
-exports.info=mongoos.model("info", infoSchema);
+exports.info=mongoos.model("infos", infoSchema);

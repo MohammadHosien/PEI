@@ -1,5 +1,4 @@
 "use client";
-import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
@@ -11,16 +10,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { Typography, Button } from "@mui/material";
-import axios from "axios";
 
 const Crousel = () => {
-  const [indexSwiper, setIndexSwiper] = useState<number | string>(0);
-  // useEffect(() => {
-  //   axios.get("http://localhost:3000/api/hello").then((res) => {
-  //     console.log(res.data);
-  //   });
-  // }, []);
-
   return (
     <div
       style={{
@@ -73,7 +64,7 @@ const Crousel = () => {
             alt="english 1"
             fill
             style={{ objectFit: "fill" }}
-            src={"/img/eng.jpg"}
+            src={"/img/eng1.jpg"}
             priority
           />
         </SwiperSlide>
