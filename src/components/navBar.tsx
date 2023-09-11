@@ -1,6 +1,7 @@
 "use client";
 
 import { whiteTheme } from "@/helpers/theme";
+import { useRouter } from "next/navigation";
 import {
   AppBar,
   Toolbar,
@@ -11,6 +12,7 @@ import {
 } from "@mui/material";
 
 const MyAppBar = () => {
+  const router=useRouter()
   return (
     <>
       <AppBar sx={{ bgcolor: "#1A56CE", width: "100%" }} dir="rtl">
@@ -33,8 +35,8 @@ const MyAppBar = () => {
               </Button>
               <Button sx={{ fontFamily: "vazir" }}>تماس با ما</Button>
               <ButtonGroup dir="ltr">
-                <Button sx={{ fontFamily: "vazir" }}>ثبت نام</Button>
-                <Button sx={{ fontFamily: "vazir" }}>ورود</Button>
+                <Button onClick={()=>{router.push('/register')}} sx={{ fontFamily: "vazir" }}>ثبت نام</Button>
+                <Button onClick={()=>{router.push("/pannel")}} sx={{ fontFamily: "vazir" }}>ورود</Button>
               </ButtonGroup>
             </ThemeProvider>
           </div>

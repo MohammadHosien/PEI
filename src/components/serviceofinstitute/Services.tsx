@@ -102,6 +102,7 @@ const Services = () => {
           item
         >
           <IconButton
+          onClick={()=>{router.push("/pannel")}}
             style={{
               position: "relative",
               backgroundColor: "#FBC421",

@@ -39,8 +39,7 @@ const Crousel = () => {
         style={{
           border: "2px black solid",
         }}
-        className="w-[75%] h-[200px] sm:h-[500px] mt-20 text-center rounded-[25px] border-solid border-2 border-black"
-        onSwiper={(swiper) => {}}
+        className="w-[65%] h-[200px] sm:h-[500px] mt-20 text-center rounded-[25px] border-solid border-2 border-black"
       
       >
         <div className="custom-pre" style={{ color: "#7f7f7f" }}>
